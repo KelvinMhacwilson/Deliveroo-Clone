@@ -34,6 +34,7 @@ const HomeScreen = () => {
     ).then((data) => setFeaturedCategories(data));
   }, []);
 
+  // console.log(featuredCategories);
   return (
     <SafeAreaView className="bg-white pt-5">
       {/* Header */}
@@ -42,11 +43,14 @@ const HomeScreen = () => {
           source={{ uri: "https://links.papareact.com/wru" }}
           className="h-7 bg-gray-300 p-4 rounded-full"
         />
-        <View className="flex-1">
+
+        <View className="flex-1 ml-2">
           <Text className="font-bold text-gray-400 text-xs">Deliver Now!</Text>
           <View className="flex-row items-center ">
             <Text className="font-bold text-xl">Current Location</Text>
-            <ChevronDownIcon size={20} color="#00CCBB" />
+            <View className="ml-1 mt-1">
+              <ChevronDownIcon size={20} color="#00CCBB" />
+            </View>
           </View>
         </View>
 
@@ -72,22 +76,16 @@ const HomeScreen = () => {
         <Categories />
 
         {/* Featured Rows */}
-        <FeaturedRow
-          title="Featured"
-          description="Paid placements from our partners"
-          id="12323"
-        />
-        <FeaturedRow
-          title="Tasty Discounts"
-          description="Everyone's been enjoying these juicy discounts!"
-          featuredCategory="discounts"
-          id="12323"
-        />
-        <FeaturedRow
-          title="Offers near you!"
-          description="Why not support your local restaurant tonight!"
-          id="123"
-        />
+        {featuredCategories?.map((category) => {
+          return (
+            <FeaturedRow
+              id={category._id}
+              title={category.name}
+              description={category.description}
+              key={category._id}
+            />
+          );
+        })}
       </ScrollView>
     </SafeAreaView>
   );
