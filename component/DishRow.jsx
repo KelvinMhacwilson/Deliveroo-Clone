@@ -7,8 +7,10 @@ import {
   MinusCircleIcon,
   PlusCircleIcon,
 } from "react-native-heroicons/outline";
+import { useDispatch } from "react-redux";
 
 const DishRow = ({ name, description, price, image, id }) => {
+  const dispatch = useDispatch();
   const [isPressed, setIsPressed] = useState(false);
   return (
     <>
