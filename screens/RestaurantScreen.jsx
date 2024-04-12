@@ -2,16 +2,13 @@ import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
 import React, { useEffect, useLayoutEffect } from "react";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { urlFor } from "../sanity";
-import {
-  LocationMarkerIcon,
-  ChevronRightIcon,
-  StarIcon,
-} from "react-native-heroicons/outline";
+import { ChevronRightIcon, StarIcon } from "react-native-heroicons/outline";
 import { MaterialCommunityIcons, Octicons } from "@expo/vector-icons";
 import DishRow from "../component/DishRow";
 import BasketIcon from "../component/BasketIcon";
 import { useDispatch } from "react-redux";
 import { setRestaurants } from "../features/restaurantSlice";
+
 const RestaurantScreen = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
