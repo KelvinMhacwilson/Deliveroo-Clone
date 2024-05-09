@@ -17,7 +17,7 @@ This project is a clone of the popular food delivery app Deliveroo, built using 
 - React Navigation
 - Redux (or any other state management library you choose)
 - Axios (for making API requests)
-- Sanity (for backend services such as database)
+- Sanity (for CMS)
 
 ## Getting Started
 
@@ -48,3 +48,14 @@ To get started with this project, follow these steps:
 
 6. The app should now be running on your device.
 
+
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and create a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+---
