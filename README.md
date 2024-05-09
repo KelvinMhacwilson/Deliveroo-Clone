@@ -1,7 +1,3 @@
-Certainly! Here's a basic template for a GitHub README.md file for a Deliveroo clone built using React Native and Expo:
-
----
-
 # Deliveroo Clone
 
 This project is a clone of the popular food delivery app Deliveroo, built using React Native and Expo.
